@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>bulb</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+        padding: 25px;
+      }
+      .bulb {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="./bulb-off.gif" class="bulb" />
+      <button class="button">turn on</button>
+    </div>
+
+    <script>
+      const bulb = document.querySelector(".bulb");
+      const button = document.querySelector(".button");
+
+      button.addEventListener("click", function () {
+        if (button.innerHTML.match("on")) {
+          bulb.src = "./bulb-on.gif";
+          button.innerHTML = "turn off";
+        } else {
+          bulb.src = "./bulb-off.gif";
+          button.innerHTML = "turn on";
+        }
+      });
+    </script>
+  </body>
+</html>

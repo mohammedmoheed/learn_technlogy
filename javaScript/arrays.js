@@ -109,6 +109,7 @@ const employee = [
 
 // splice cut the element from index to how many element
 // it modifies original array
+// splice(index, how many element)
 const names = ["moheed", "saud", "sameed", "kashif"];
 const res = names.splice(1, 1);
 console.log(res);
